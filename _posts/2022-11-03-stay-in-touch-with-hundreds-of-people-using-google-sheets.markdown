@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Stay in touch with hundreds of people using Google Sheets"
-date:   2022-11-02 21:00:00 +0800
+date:   2022-11-03 21:00:00 +0800
 categories: jekyll update
-permalink: /stay-in-touch/
+permalink: /stay-in-touch
 ---
 I'm assuming you have already heard about Derek Sivers and the database he's been using to stay in touch with hundreds of people. If you haven't, you can learn more about it from his [blog post](https://sive.rs/hundreds){:target="_blank"} or even better, his book [Your Music and People](https://sive.rs/m){:target="_blank"}. Derek recommended some [softwares](https://sive.rs/dbt) but he ended up programming his own and planned to share it someday. Unfortunately, based on [this comment](https://news.ycombinator.com/item?id=30333667){:target="_blank"} he wrote, it may never be public.
 
