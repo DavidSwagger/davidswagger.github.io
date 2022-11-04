@@ -13,6 +13,7 @@ Luckily, Jakob Greenfeld implemented Derek's system using Airtable and showed us
 
 I don't use Airtable that much so it would be very luxury to me if I have to pay $24/month to run this system. So I spent some time on research and found a way to do this using Google Sheets. It doesn't need any third party software and all you need is a Google Sheets file. And it's totally free. Now I'm showing you how.
 
+### Step1 - Create empty sheets
 First, create a new Google Sheets file in your Google Drive. I named it "Stay In Touch" but you can choose whatever you want. In this new file, you'll have a default Sheet named 'Sheet1'. Rename it to 'Established Contacts'. Then create five columns including 'Name', 'Contact Info', 'Notes', 'Category', 'Last Contact'. The logic is same as what Jakob uses in his system so if you're confused about these columns, you can read his post for more details. I've put screenshots of demo sheets at the end of this post so that you can use as a reference.
 
 ![Rename the default sheet to 'Established Contacts']({{ BASE_PATH }}/assets/images/empty-established-contacts-screenshot.jpg)
@@ -25,6 +26,7 @@ Now we add a new Sheet and rename it to `Potential New Contacts`. And then creat
 
 ![Create a new sheet named 'Potential New Contacts']({{ BASE_PATH }}/assets/images/empty-potential-new-contacts-screenshot.jpg)
 
+### Step2 - Create Apps Script
 Here comes the most important part. We'll use Google Sheets' built-in 'Apps Script' to add the automation functionality. The advantage over Airtable is that it's totally free in Google Sheets. Click the 'Extentions' tab in the navigator and then click 'Apps Script'. You'll be redirected to another tab. If you're not familiar with 'Apps Script', don't panick. It's a cloud-based JavaScript platform that allows uers to write customized code to integrate with and automate tasks across Google products. I'm showing you how to put our code to automate our task.
 
 ![App Scripts in navigator bar]({{ BASE_PATH }}/assets/images/click-app-scripts-in-navigator-screenshot.jpg)
@@ -152,6 +154,7 @@ The only thing you need to change in the code is 'SPREADSHEETID' and 'EMAILADDRE
 
 ![App Script Editor screenshot]( {{ BASE_PATH }}/assets/images/apps-script-editor-screenshot.jpg )
 
+### Step3 - Setup Automation
 Now move the cursor to the navigator bar on the left and click the 'alarm clock' icon. Setup values as the screenshot shows below. You can choose whichever value it provides for 'Select time of day'. It controls the time when you receive the email notification. I'm using '8am to 9am', which means Google will send out the email to my inbox during this time range.
 
 ![App Script Editor screenshot]( {{ BASE_PATH }}/assets/images/apps-script-triggers-screenshot.jpg )
@@ -164,6 +167,7 @@ Then you click save. It will popup a dialogue asking you to login your Google ac
 
 It's safe to grant permissions to this program because it only contains the code that you pasted before without using any third party add-ons. The program will only view and edit the Google Sheets file that you assigned in the code. If you still worry about the safety, spent some time reviewing the code and figure out how it works. The code is very simple.
 
+### Step4 - Add contacts
 Now you can put all your established contacts into the 'Established Contacts' sheet and remember to input the last time you contacted them in the 'Last Contact' column. If you don't remember, choose any date you prefer. Just don't leave it empty.
 
 ![Established Contacts sheet screenshot]( {{ BASE_PATH }}/assets/images/established-contacts-screenshot.jpg )
